@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package io.github.gh;
+
+service Greeter{
+
+  rpc SayHello (HelloRequest) returns (EmptyMessage) {
+  };
+}
+
+message HelloRequest{
+  string first= 1;
+  string second= 2;
+}
+
+message EmptyMessage {
+}
+
