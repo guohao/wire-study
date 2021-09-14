@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.5.30"
+    kotlin("jvm") version "1.5.20"
+    `kotlin-dsl`
     id("com.squareup.wire") version "4.0.0-alpha.11"
 }
 
@@ -12,9 +13,10 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("com.squareup.wire:wire-runtime:4.0.0-alpha.11")
-    implementation("com.squareup.wire:wire-grpc-client:4.0.0-alpha.11")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.30")
+    val wire="4.0.0-alpha.11"
+    implementation("com.squareup.wire:wire-runtime:$wire")
+    implementation("com.squareup.wire:wire-grpc-client:$wire")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.20")
 }
 wire {
     kotlin {

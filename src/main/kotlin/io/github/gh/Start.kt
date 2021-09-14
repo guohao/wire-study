@@ -12,6 +12,7 @@ fun main() {
             .baseUrl("http://foo")
             .build()
         val client = grpcClient.create(GreeterClient::class)
-        client.SayHello().execute(HelloRequest("hello", "world"))
+        val request = HelloRequest("hello", "world")
+        client.SayHello().execute(request)
     }
 }
